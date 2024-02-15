@@ -1,0 +1,97 @@
+/* navbar */
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #7a9077;
+  font-family: "Gilroy-Light", sans-serif;
+  text-transform: uppercase;
+}
+
+nav img {
+  width: 120px;
+  padding: 5px;
+  margin: 0 20px;
+}
+
+nav svg {
+  width: 20px;
+}
+
+nav svg:hover {
+  scale: 1.2;
+}
+
+nav a {
+  color: #7a9077;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: small;
+}
+
+nav a:hover {
+  font-family: "Gilroy-bold", sans-serif;
+}
+
+nav .first {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+}
+
+nav .first .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+nav .second {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+nav .second p {
+  margin: 0 10px;
+}
+
+/* navbar responsive */
+@media only screen and (max-width: 600px) {
+  nav img {
+    width: 90px;
+  }
+
+  nav .first .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav .first .links a {
+    margin: 0 5px;
+    font-size: x-small;
+  }
+
+  nav .second p {
+    display: none;
+  }
+}
