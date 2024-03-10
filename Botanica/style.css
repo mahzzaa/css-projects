@@ -1,10 +1,21 @@
 /* navbar */
 @import url("https://fonts.cdnfonts.com/css/gilroy-bold");
+@import url("https://fonts.cdnfonts.com/css/upright");
+@import url("https://fonts.cdnfonts.com/css/callina");
+
+/* header */
+@import url("https://db.onlinewebfonts.com/c/c1a45b2db15fa7abe4df87429df1f939?family=Moniqa+Med+Cond+Display");
+@import url("https://fonts.cdnfonts.com/css/qarkine");
+@import url("https://fonts.cdnfonts.com/css/meiland-gorgeous");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  position: relative;
 }
 
 nav {
@@ -20,12 +31,17 @@ nav {
   color: #7a9077;
   font-family: "Gilroy-Light", sans-serif;
   text-transform: uppercase;
+  background-color: #fff;
+  z-index: 2;
 }
 
-nav img {
-  width: 120px;
-  padding: 5px;
+nav .logo {
+  font-family: "Callina", sans-serif;
+  text-transform: capitalize;
+  font-size: xx-large;
+  font-weight: bolder;
   margin: 0 20px;
+  padding: 4px 0;
 }
 
 nav svg {
@@ -73,17 +89,62 @@ nav .second p {
   margin: 0 10px;
 }
 
-/* navbar responsive */
-@media only screen and (max-width: 600px) {
+nav .hamburger {
+  display: none;
+}
+
+.sidebar {
+  position: absolute;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background-color: #fff;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  z-index: 3;
+}
+
+.sidebar .links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  width: 100%;
+}
+
+.sidebar .links a {
+  color: #7a9077;
+  text-decoration: none;
+  padding: 30px 10px;
+  font-size: large;
+}
+
+.sidebar .links a:hover {
+  border-bottom: 1px solid #7a9077;
+}
+
+.sidebar svg {
+  width: 30px;
+  position: absolute;
+  right: 0;
+  margin: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+  /* navbar responsive */
+
   nav img {
     width: 90px;
   }
 
+  nav svg {
+    width: 25px;
+  }
+
   nav .first .links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    display: none;
   }
 
   nav .first .links a {
@@ -94,4 +155,168 @@ nav .second p {
   nav .second p {
     display: none;
   }
+
+  nav .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  /* header */
+  .header .section2 {
+    display: none;
+  }
+
+  .header {
+    background-image: url(./img/flower.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .header .section1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .section1 .title p {
+    font-size: 70px !important;
+  }
+
+  .header .section1 .title {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header .info {
+    background-color: #fff;
+    margin-top: 0;
+  }
+}
+
+/* header */
+
+.header {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.header svg {
+  width: 30px;
+}
+
+.header img {
+  width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.header img:hover {
+  transform: scale(1.02);
+}
+
+.social {
+  position: absolute;
+  left: 0;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.social svg {
+  margin: 6px 0;
+  width: 25px;
+}
+
+.social svg:hover g {
+  fill: #ca7e8d;
+}
+
+.header .section1 {
+  height: auto;
+}
+
+.header .section1 .title p {
+  font-size: 110px;
+  font-weight: 900;
+  text-transform: capitalize;
+  background: -webkit-linear-gradient(#d092a0, #dcc5d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Qarkine", sans-serif;
+}
+
+.header .section1 .title {
+  position: relative;
+  z-index: 1;
+  top: 50px;
+  background-color: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  width: 110%;
+  height: auto;
+}
+
+.header .section1 .info {
+  width: 75%;
+  margin-top: 100px;
+  margin-bottom: 30px;
+  line-height: 30px;
+}
+
+.header .section1 p {
+  color: #7a9077;
+  text-transform: uppercase;
+  font-family: "Gilroy-medium", sans-serif;
+  margin-top: 0;
+}
+
+.header .section1 button {
+  background-color: #d092a0;
+  background-image: linear-gradient(to right, #d092a0, #dcc5d0);
+  color: #fff;
+  padding: 7px 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 14px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.header .section1 button:hover {
+  background-color: #d092a0;
+  background-image: linear-gradient(15deg, #d092a0, #dcc5d0);
+}
+
+.header .section1 button p {
+  color: #fff;
+  margin-right: 20px;
+}
+
+.header .section2 {
+  position: relative;
+}
+
+.header .section2 .box {
+  width: 390px;
+  height: 600px;
+  position: absolute;
+  right: -30px;
+  top: -20px;
+  z-index: -1;
+  border: #7a9077;
+  border-style: solid;
 }
