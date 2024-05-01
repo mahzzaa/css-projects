@@ -1,0 +1,9 @@
+Fonts used in this design:
+
+Font: Khand
+Author: Indian Type Foundry
+Url: https://fonts.google.com/specimen/Khand
+
+Font: PT Sans
+Author: ParaType
+Url: https://fonts.google.com/specimen/PT+Sans
